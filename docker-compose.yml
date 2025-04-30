@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  mcp-server:
+    build: .
+    image: workout-planner:latest    # ← ここを追加
+    container_name: workout-planner
+    environment:
+      - DB_PATH=/app/data/workouts.db
+    volumes:
+      - workouts-data:/app/data
+    stdin_open: true
+    tty: true
+
+volumes:
+  workouts-data:
