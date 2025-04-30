@@ -1,18 +1,18 @@
 ## 準備
-プロジェクトに移動します。
+①プロジェクトに移動します。
 ```
-git clone 
+git clone git@github.com:ikuoikuo/workout-mcp.git
 ```
 ```
 cd workout-mcp 
 ```
 
-Dockerイメージを作成します。
+②Dockerイメージを作成します。
 ```
 docker compose build 
 ```
 
-claude_desktop_config.jsonに以下を追記します。
+③claude_desktop_config.jsonに以下を追記します。
 
 ```json
     "Workout Planner": {
@@ -29,6 +29,7 @@ claude_desktop_config.jsonに以下を追記します。
 
 ### 2. DBの参照
 「何日に何したっけ？」などと聞くことでDBから記録を引っ張ってこれます。
+こちらも自然言語ベースでデータの取り出しができるのは便利です。
 
 ![alt text](asset/image-2.png)
 
